@@ -18,10 +18,12 @@ public class Actor {
 	}
 	
 	void printInfo(){
-		System.out.printf("이름: %s\n", name);
-		System.out.printf("성별: %s\n", sex);
-		System.out.printf("생년월일: %s\n", birthdate);
-		System.out.printf("국적: %s\n", nationality);
+		
+		System.out.printf("이름: %s | ", name);
+		System.out.printf("성별: %s | ", sex);
+		System.out.printf("생년월일: %s | ", birthdate);
+		System.out.printf("국적: %s", nationality);
+		System.out.println();
 	}
 	
 }

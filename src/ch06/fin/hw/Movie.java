@@ -7,7 +7,16 @@ public class Movie {
 	String director;
 	int runningTime;
 	Actor actor;
+	Actor[] actorArray;
 	
+	Actor[] getActorArray() {
+		return actorArray;
+	}
+
+	void setActorArray(Actor[] actorArray) {
+		this.actorArray = actorArray;
+	}
+
 	/**
 	 * @return the actor
 	 */
@@ -28,7 +37,10 @@ public class Movie {
 		System.out.printf("감독: %s\n", getDirector());
 		System.out.printf("상영시간: %d(분)\n", getRunningTime());
 		System.out.println("------Actor Info-----");
-		actor.printInfo();
+		
+		for(int i=0; i< actorArray.length; i++) {
+			actorArray[i].printInfo();
+		}
 	}
 	
 	public Movie(String title, String category, String director, int runningTime, Actor actor) {
@@ -38,6 +50,13 @@ public class Movie {
 		this.director = director;
 		this.runningTime = runningTime;
 		this.actor = actor;
+	}
+	public Movie(String title, String category, String director, int runningTime, Actor[] actors) {
+		this.title = title;
+		this.category = category;
+		this.director = director;
+		this.runningTime = runningTime;
+		this.actorArray = actors;
 	}
 
 	public Movie(String title, String category ) {

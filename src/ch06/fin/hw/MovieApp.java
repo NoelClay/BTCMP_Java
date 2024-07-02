@@ -43,21 +43,26 @@ public class MovieApp {
 
     public static void main(String[] args) {
 
-        System.out.println("===== Actor Info =====");
-        String name = "톰 크루즈";
-        String sex = "남자";
-        String birthdate = "1962.07.03";
-        String nationality = "미국";
-        Actor actor = new Actor(name, sex, birthdate, nationality);
-        actor.printInfo();
+//        System.out.println("===== Actor Info =====");
+//        String name = "톰 크루즈";
+//        String sex = "남자";
+//        String birthdate = "1962.07.03";
+//        String nationality = "미국";
+//        Actor actor = new Actor(name, sex, birthdate, nationality);
+//        actor.printInfo();
 
         System.out.println("\n===== Movie Info =====");
         String title = "탑건 매버릭";
         String category = "액션";
         String director = "조셉 코신스키";
         int runningTime = 130;
+        
+        Actor[] actorArray = new Actor[3];
+        actorArray[0] = MovieService.makeActor("탐 크루즈", "남자", "1962.07.03", "미국");
+        actorArray[1] = MovieService.makeActor("마일스 텔러", "남자", "1962.02.20", "미국");
+        actorArray[2] = MovieService.makeActor("모니카 바바로", "여자", "1990.06.18", "미국");
 
-        Movie m = new Movie(title, category, director, runningTime, actor);
+        Movie m = new Movie(title, category, director, runningTime, actorArray);
         m.printInfo();
     }
 }

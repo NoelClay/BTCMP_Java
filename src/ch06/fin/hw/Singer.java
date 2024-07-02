@@ -53,13 +53,17 @@ public class Singer {
 	void setCompany(String company) {
 		this.company = company;
 	}
-	Singer(String name, char sex, String birthDate, String company) {
+	public Singer(String name, char sex, String birthDate, String company) {
 		super();
 		this.name = name;
 		this.sex = sex;
 		this.birthDate = birthDate;
 		this.company = company;
 	}
+	public Singer(String name){
+		this(name, ' ', " ", " ");
+	}
+	
 	void printInfo() {
 		System.out.printf(" 이름: %s | ", getName());
 		System.out.printf(" 성별: %c | ", getSex());
