@@ -1,0 +1,6 @@
+package ch05.sec12;
+
+enum Week {
+
+	MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
