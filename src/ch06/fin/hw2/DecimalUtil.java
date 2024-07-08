@@ -1,12 +1,12 @@
 package ch06.fin.hw2;
 
-import java.text.DecimalFormat;
+import java.text.*;
 
 public class DecimalUtil {
 
 	/**
 	 * 3자리마다 콤마를 찍는다.
-	 * 
+	 * DecimalUtil.decimalComma
 	 * @param input 숫자
 	 * @return
 	 */
